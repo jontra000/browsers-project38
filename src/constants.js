@@ -13,3 +13,4 @@ export const ANSWERS_LIST_ID = 'answers-list';
 export const NEXT_QUESTION_BUTTON_ID = 'next-question-button';
 export const ANSWERS_OPTION_ID = 'answers-option';
 export const ANSWERS_OPTION_RADIO_BUTTON_ID = 'answers-option-radio-button';
+export const WELCOME_TITLE = 'welcome-title'

@@ -77,6 +77,7 @@ const checkRadioButton = (key) => {
   document.getElementById(
     ANSWERS_OPTION_RADIO_BUTTON_ID + '_' + key
   ).checked = true;
+  updateScore()
 };
 
 const clearAllSelections = () => {
@@ -117,4 +118,25 @@ const showCorrectAnswer = () => {
     .getElementById(ANSWERS_OPTION_ID + '_' + correctOption)
     .classList.add('correct-answer');
 };
+
+let count = 0;
+
+const updateScore = () => {
+    if(getCurrentQuestion().correct === getCurrentQuestion().selected){
+      count++
+      showScore(count)
+    }
+}
+
+const showScore = (count) => {
+  const score = document.getElementById('score')
+  score.textContent = `Score: ${count}`
+}
+
+export const initScore = () => {
+  const score = document.body.appendChild(document.createElement('div'));
+  score.id = "score"
+  score.textContent = "Score: 0"
+}
+
 
